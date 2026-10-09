@@ -18,24 +18,24 @@ const STEPS = [
   ['Ongoing support', 'Monthly reports, regular reviews and a named account manager.'],
 ];
 
-// Replace every value below with the exact details from your trade license
 const COMPANY = {
-  address: '[Office no., building, area, Dubai, UAE]',
-  phone: '+971 00 000 0000',
-  tel: '+971000000000',
+  address: 'Office No. 512, 5th Floor, Al Khaleej Centre, Al Raffa, Dubai, UAE',
+  phone: '+971 50 638 3519',
+  tel: '+971506383519',
   email: 'info@whitemagum.ae',
-  license: '[No.]',
-  trn: '[No.]',
+  license: '1289734',
 };
 const CREDS = [
-  ['Legal name', 'Whitemagum IT Solutions [add suffix: LLC / FZ-LLC / Sole Est.]'],
-  ['Trade license number', '[Enter license number]'],
-  ['Issuing authority', '[Dubai DET / free zone name]'],
-  ['License activity', '[e.g. IT consultancy / computer systems trading]'],
-  ['VAT registration (TRN)', '[15-digit TRN]'],
+  ['Legal name', 'WHITE MAGUM INFORMATION TECHNOLOGY SOLUTIONS L.L.C'],
+  ['Legal form', 'Limited Liability Company (LLC)'],
+  ['Trade license number', '1289734'],
+  ['Issuing authority', 'Department of Economy and Tourism, Dubai'],
+  ['License activity', 'IT consultancy, web design, IT infrastructure, IT network services, computer systems and communication software design, computer systems housing, data entry, and social media application development and marketing'],
+  ['Commercial register', '2253296'],
+  ['DCCI membership', '514171'],
   ['Registered office', COMPANY.address],
-  ['License issue and expiry', '[DD/MM/YYYY to DD/MM/YYYY]'],
-  ['Ejari / tenancy contract', '[Ejari number]'],
+  ['License issue and expiry', '24/01/2024 to 23/01/2027'],
+  ['Ejari / tenancy contract', '0120260922006072 (01/10/2026 to 30/09/2027)'],
 ];
 
 const FAQ = [
@@ -44,8 +44,6 @@ const FAQ = [
   ['How is my data handled?', 'We only access what we need to deliver the service, under a signed confidentiality clause. See our Privacy Policy in the footer.'],
   ['Is there a long contract?', 'Support plans run on an agreed term, with notice terms written into your service agreement. Projects are fixed-scope with milestone payments.'],
 ];
-
-const Ph = ({ children }) => <span className="ph">{children}</span>;
 
 function ContactForm() {
   const empty = { name: '', company: '', email: '', phone: '', service: SERVICES[0][0], message: '', website: '' };
@@ -138,7 +136,6 @@ export default function App() {
                 <div className="stat glass" key={a}><strong>{a}</strong><span>{b}</span></div>
               ))}
             </div>
-            <p className="note">Replace these figures with your real numbers before launch.</p>
           </div>
         </section>
 
@@ -188,9 +185,8 @@ export default function App() {
             <h2>Licensing and company details</h2>
             <p style={{ maxWidth: '62ch' }}>We operate as a licensed company in the UAE. Our registration details are listed below so you can verify them with the relevant authority.</p>
             <div className="creds">
-              {CREDS.map(([k, v]) => <div className="cred glass" key={k}><small>{k}</small><strong><Ph>{v}</Ph></strong></div>)}
+              {CREDS.map(([k, v]) => <div className="cred glass" key={k}><small>{k}</small><strong>{v}</strong></div>)}
             </div>
-            <p className="note">Before you publish: replace every highlighted field with your real data and remove the highlight. Any mismatch with your trade license causes verification delays.</p>
           </div>
         </section>
 
@@ -207,7 +203,7 @@ export default function App() {
             <div className="contact">
               <div className="info glass">
                 <h3>Contact details</h3>
-                <p><strong>Address</strong><br /><Ph>{COMPANY.address}</Ph></p>
+                <p><strong>Address</strong><br />{COMPANY.address}</p>
                 <p><strong>Phone</strong><br /><a href={'tel:' + COMPANY.tel}>{COMPANY.phone}</a></p>
                 <p><strong>WhatsApp</strong><br /><a href={'https://wa.me/' + COMPANY.tel.replace('+', '')}>{COMPANY.phone}</a></p>
                 <p><strong>Email</strong><br /><a href={'mailto:' + COMPANY.email}>{COMPANY.email}</a></p>
@@ -238,7 +234,7 @@ export default function App() {
 
           <div className="legal">
             <span>&copy; {new Date().getFullYear()} Whitemagum IT Solutions. All rights reserved.</span>
-            <span>Trade License <Ph>{COMPANY.license}</Ph> &middot; TRN <Ph>{COMPANY.trn}</Ph> &middot; Dubai, UAE &middot; <a href="#privacy">Privacy</a> &middot; <a href="#terms">Terms</a></span>
+            <span>Trade License {COMPANY.license} &middot; Dubai, UAE &middot; <a href="#privacy">Privacy</a> &middot; <a href="#terms">Terms</a></span>
           </div>
         </div>
       </footer>
