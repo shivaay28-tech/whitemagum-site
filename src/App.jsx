@@ -124,7 +124,7 @@ export default function App() {
               <h3>Company snapshot</h3>
               <ul>
                 <li>Based in<span>Dubai, United Arab Emirates</span></li>
-                <li>Support hours<span>Sun to Fri, 9am to 6pm GST</span></li>
+                <li>Support hours<span>Sun to Fri, 8:30am to 5:30pm GST</span></li>
                 <li>Emergency line<span>24/7 for support clients</span></li>
                 <li>Languages<span>English, Arabic, Hindi, Urdu</span></li>
               </ul>
@@ -207,7 +207,7 @@ export default function App() {
                 <p><strong>Phone</strong><br /><a href={'tel:' + COMPANY.tel}>{COMPANY.phone}</a></p>
                 <p><strong>WhatsApp</strong><br /><a href={'https://wa.me/' + COMPANY.tel.replace('+', '')}>{COMPANY.phone}</a></p>
                 <p><strong>Email</strong><br /><a href={'mailto:' + COMPANY.email}>{COMPANY.email}</a></p>
-                <p><strong>Business hours</strong><br />Sunday to Friday, 9am to 6pm GST</p>
+                <p><strong>Business hours</strong><br />Sunday to Friday, 8:30am to 5:30pm GST</p>
               </div>
               <ContactForm />
             </div>
