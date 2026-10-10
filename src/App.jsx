@@ -20,8 +20,8 @@ const STEPS = [
 
 const COMPANY = {
   address: 'Office No. 512, 5th Floor, Al Khaleej Centre, Al Raffa, Dubai, UAE',
-  phone: '+971 50 638 3519',
-  tel: '+971506383519',
+  phone: '+971 50 606 2316',
+  tel: '+971506062316',
   email: 'info@whitemagum.ae',
   license: '1289734',
 };
